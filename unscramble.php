@@ -13,4 +13,10 @@ function calculateWordValue($word) {
     return implode('', $letters);
 }
 
+// Sõnade massiivi lugemine.
+$wordlist = file('wordlist.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+// Segamini aetud sõnade lugemine.
+$scrambleWords = file('scrambled_words.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
 ?>
