@@ -19,4 +19,13 @@ $wordlist = file('wordlist.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 // Segamini aetud sõnade lugemine.
 $scrambleWords = file('scrambled_words.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
+// Assotsiatiivse massiivi loomine.
+$wordValueMap = [];
+foreach ($wordlist as $word) {
+    $value = calculateWordValue($word);
+    $wordValueMap[$value] = $word;
+}
+
+
+
 ?>
