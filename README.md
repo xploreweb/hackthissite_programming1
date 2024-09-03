@@ -6,3 +6,6 @@ Skripti tööpõhimõte:
 - Lugeda failidest sõnaloendid ja koostada massiivid.
 - Assotsiatiivse massiivi loomine.
 - Vastete leidmine ja esitamine.
+<br><br>
+![image](https://github.com/user-attachments/assets/79451357-5429-439e-9bc8-b721341d72f3)
+![image](https://github.com/user-attachments/assets/ecf71a11-630a-414d-8cc2-a631628e71c7)
