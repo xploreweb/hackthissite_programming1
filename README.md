@@ -4,5 +4,5 @@ Lihtne PHP-skript, mis võrdleb etteantud sõnade loendit segamini ajatud sõnad
 Skripti tööpõhimõte:
 - Funktsioon (CalculateWordValue), mis jagab sõna üksikuteks tähtedeks, sorteerib tähestikulises järjekorras, ühendab stringiks.
 - Lugeda failidest sõnaloendid ja koostada massiivid.
-- Sõnaloendite loopimine, assotsiatiivse massiivi salvestamine.
+- Assotsiatiivse massiivi loomine.
 - Vastete leidmine ja esitamine.
