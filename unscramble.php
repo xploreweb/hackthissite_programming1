@@ -5,3 +5,12 @@
 // Check the numbers against each other
 // Print the word if you have a match
 
+<?php
+// Function. Sõnade sorteerimine tähtede järgi.
+function calculateWordValue($word) {
+    $letters = str_split($word);
+    sort($letters);
+    return implode('', $letters);
+}
+
+?>
