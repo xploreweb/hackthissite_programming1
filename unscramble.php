@@ -22,9 +22,15 @@ foreach ($wordlist as $word) {
 // Vastete leidmine ja esitamine.
 foreach ($scrambledWords as $scrambledWord) {
     $scrambledValue = calculateWordValue($scrambledWord);
-
+    // Õiged sõnad reas, komaga eraldatud:
     if (isset($wordValueMap[$scrambledValue])) {
-        echo "Segamini aetud sõna: $scrambledWord -> Sõna nimekirjas : " . $wordValueMap[$scrambledValue] . "\n";
+        echo "$wordValueMap[$scrambledValue],";
+    // Nimekirja esitamine kujul:
+    // "Segamini aetud sõna: ... -> Sõna nimekirjas : ..."
+    // if (isset($wordValueMap[$scrambledValue])) {
+    //    echo "Segamini aetud sõna: $scrambledWord -> Sõna nimekirjas : " . $wordValueMap[$scrambledValue] . "\n";
+    } else {
+        echo "Ei leitud ühtegi vastet: $scrambledWord\n";
     }
 }
 
