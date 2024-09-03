@@ -1,10 +1,3 @@
-// Read in the wordlist to an array
-// Read in the scrambled words.
-// Give the scrambled words a value
-// Give the wordlist words a value
-// Check the numbers against each other
-// Print the word if you have a match
-
 <?php
 // Function. Sõnade sorteerimine tähtede järgi.
 function calculateWordValue($word) {
@@ -17,7 +10,7 @@ function calculateWordValue($word) {
 $wordlist = file('wordlist.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 // Segamini aetud sõnade lugemine.
-$scrambleWords = file('scrambled_words.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$scrambledWords = file('scrambled_words.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 // Assotsiatiivse massiivi loomine.
 $wordValueMap = [];
@@ -26,6 +19,13 @@ foreach ($wordlist as $word) {
     $wordValueMap[$value] = $word;
 }
 
+// Vastete leidmine ja esitamine.
+foreach ($scrambledWords as $scrambledWord) {
+    $scrambledValue = calculateWordValue($scrambledWord);
 
+    if (isset($wordValueMap[$scrambledValue])) {
+        echo "Segamini aetud sõna: $scrambledWord -> Sõna nimekirjas : " . $wordValueMap[$scrambledValue] . "\n";
+    }
+}
 
 ?>
